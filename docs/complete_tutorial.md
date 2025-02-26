@@ -42,7 +42,25 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Step 4: Configure Your Environment
+### Step 4: Set up Ollama_Agents
+
+Some components of this project depend on the Ollama_Agents repository:
+
+```bash
+# Clone the Ollama_Agents repository (if you don't already have it)
+git clone https://github.com/MikeyBeez/Ollama_Agents.git ../Ollama_Agents
+
+# Add to your Python path
+export PYTHONPATH="../Ollama_Agents:$PYTHONPATH"
+
+# If you want to make this permanent, add to your shell configuration:
+echo 'export PYTHONPATH="../Ollama_Agents:$PYTHONPATH"' >> ~/.bashrc  # or ~/.zshrc
+
+# Install its dependencies
+pip install -r ../Ollama_Agents/requirements.txt
+```
+
+### Step 5: Configure Your Environment
 
 ```bash
 cp .env.sample .env
@@ -71,7 +89,7 @@ ETHICAL_CATEGORIES=privacy,fairness,autonomy,harm,deception,general_ethics
 LOG_LEVEL=INFO
 ```
 
-### Step 5: Create a Branch for Your Contribution
+### Step 6: Create a Branch for Your Contribution
 
 ```bash
 git checkout -b add-my-training-examples

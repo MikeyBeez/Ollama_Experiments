@@ -23,6 +23,7 @@ Our goal is to:
 - Python 3.6+
 - Ollama installed and running locally (or remotely)
 - Language models loaded in Ollama (e.g., deepseek-r1, llama3, etc.)
+- MikeyBeez/Ollama_Agents (for some components - see installation instructions below)
 
 ## Setup
 
@@ -43,7 +44,19 @@ Our goal is to:
    pip install -r requirements.txt
    ```
 
-4. Configure the environment:
+4. Set up Ollama_Agents:
+   ```bash
+   # Clone the Ollama_Agents repository
+   git clone https://github.com/MikeyBeez/Ollama_Agents.git ../Ollama_Agents
+   
+   # Add to your Python path (you may want to add this to your .bashrc or .zshrc)
+   export PYTHONPATH="../Ollama_Agents:$PYTHONPATH"
+   
+   # Install its dependencies
+   pip install -r ../Ollama_Agents/requirements.txt
+   ```
+
+5. Configure the environment:
    ```bash
    cp .env.sample .env
    # Edit the .env file to set your preferred model and Ollama host
