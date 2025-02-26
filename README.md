@@ -49,6 +49,10 @@ Our goal is to:
    # Edit the .env file to set your preferred model and Ollama host
    ```
 
+## Complete Tutorial
+
+For a step-by-step walkthrough of the entire process from setup to contributing, see our [Complete Tutorial](docs/complete_tutorial.md).
+
 ## Creating Synthetic Training Data
 
 This repository demonstrates creating synthetic training data for AI models with specific objective functions, such as ethical reasoning. Here's the general workflow:
